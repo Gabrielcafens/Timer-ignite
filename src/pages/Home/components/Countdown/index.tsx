@@ -1,6 +1,11 @@
 import { CountdownContainer, Separator } from './styles'
 
-export function Countdown() {
+interface CountdownProps {
+  minutes: string
+  seconds: string
+}
+
+export function Countdown({ minutes, seconds }: CountdownProps) {
   return (
     <CountdownContainer>
       <span>{minutes[0]}</span>
